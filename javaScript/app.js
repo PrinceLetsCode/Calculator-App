@@ -89,16 +89,11 @@ equals_button.addEventListener("click", () => {
       // console.log(operand_1*operand_2);
       break;
     case "/":
-      if (operand_2 !== 0) {
         result_disp.textContent = operand_1 / operand_2;
         number_string = operand_1 / operand_2;
         // console.log(operand_1/operand_2);
         break;
-      } else {
-        number_string = "";
-        result_disp.textContent = 0;
-        break;
-      }
+      
 
     default:
       console.log("no operand");
