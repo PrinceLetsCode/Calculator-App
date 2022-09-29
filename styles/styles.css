@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+    font-family: 'League Spartan', sans-serif;
+    /* border: 1px solid black; */
+}
+
+.theme-1{
+    --main-background:hsl(222, 26%, 31%);
+    --result-display:hsl(224, 36%, 15%);
+    --btngrid-toggle:hsl(223, 31%, 20%);
+
+    --resultdisp-text:hsl(0, 0%, 100%);
+    --text-main:hsl(0, 0%, 100%);
+    --opbtn-text:hsl(225, 21%, 49%);
+    --resetDlt-text:hsl(30, 25%, 89%);
+    --equals-text:hsl(30, 25%, 89%);
+
+    --resetdlt-background:hsl(225, 21%, 49%);
+    --resetdlt-shadow:hsl(224, 28%, 35%);
+
+    --equals-toggle:hsl(6, 63%, 50%);
+    --equalstoggle-shadow:hsl(6, 70%, 34%);
+
+    --opbtn-background:hsl(30, 25%, 89%);
+    --opbtn-shadow:hsl(28, 16%, 65%);
+
+    --delReset-hover:hsl(225, 21%, 59%);
+    --equals-hover:hsl(6, 63%, 60%);
+    --opbtn-hover:hsl(0, 0%, 100%);
+
+    --attribution-one:hsl(6, 63%, 50%);
+    --attribution-two:hsl(0, 0%, 100%);
+    
+}
+
+.theme-2{
+    --main-background:hsl(0, 0%, 90%);
+    --result-display:hsl(0, 0%, 93%);
+    --btngrid-toggle:hsl(0, 5%, 81%);
+
+    --resultdisp-text:hsl(60, 10%, 19%);
+    --text-main:hsl(60, 10%, 19%);
+    --opbtn-text:hsl(60, 10%, 19%);
+    --resetDlt-text:hsl(0, 0%, 100%);
+    --equals-text:hsl(0, 0%, 100%);
+
+    --resetdlt-background:hsl(185, 42%, 37%);
+    --resetdlt-shadow:hsl(185, 58%, 25%);
+
+    --equals-toggle:hsl(25, 98%, 40%);
+    --equalstoggle-shadow:hsl(25, 99%, 27%);
+
+    --opbtn-background:hsl(45, 7%, 89%);
+    --opbtn-shadow:hsl(35, 11%, 61%);
+
+    --delReset-hover:hsl(186, 42%, 56%);
+    --equals-hover:hsl(25, 99%, 61%);
+    --opbtn-hover:hsl(0, 0%, 100%);
+
+    --attribution-one:hsl(0, 0%, 0%);
+    --attribution-two:hsl(185, 42%, 37%);
+}
+
+.theme-3{
+    --main-background:hsl(268, 75%, 9%);
+    --result-display:hsl(268, 71%, 12%);
+    --btngrid-toggle:hsl(268, 71%, 12%);
+
+    --resultdisp-text:hsl(52, 100%, 62%);;
+    --text-main:hsl(52, 100%, 62%);
+    --opbtn-text:hsl(52, 100%, 62%);
+    --resetDlt-text:hsl(0, 0%, 100%);
+    --equals-text:hsl(198, 19%, 13%);
+    
+    --resetdlt-background:hsl(281, 89%, 26%);
+    --resetdlt-shadow:hsl(285, 91%, 52%);
+    
+    --equals-toggle:hsl(176, 100%, 44%);
+    --equalstoggle-shadow:hsl(177, 92%, 70%);
+    
+    --opbtn-background:hsl(268, 47%, 21%);
+    --opbtn-shadow:hsl(290, 70%, 36%);
+    
+    --delReset-hover:hsl(280, 56%, 44%);
+    --equals-hover:hsl(177, 100%, 79%);
+    --opbtn-hover:hsl(268, 54%, 44%);
+
+    --attribution-one:hsl(0, 0%, 100%);
+    --attribution-two:hsl(176, 100%, 44%);
+
+}
+
+
+
+
+button {
+    cursor: pointer;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 900px;
+
+
+    background-color: var(--main-background);
+}
+
+
+.calc {
+    display: flex;
+    max-width: 545px;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 30px;
+    
+    color: var(--text-main);
+}
+
+#cal-text {
+    font-size: 2rem;
+}
+
+.theme-parent {
+    display: flex;
+    align-items: flex-end;
+
+}
+
+.theme-parent>span {
+    margin-right: 10px;
+    font-size: 0.8rem;
+}
+
+.tn {
+    display: flex;
+    justify-content: space-around;
+}
+
+.theme-buttons {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 30%/90%;
+    border: 1px solid black;
+    padding: 4px 0;
+    margin-top: 5px;
+
+    background-color: var(--btngrid-toggle);
+
+
+}
+
+.theme-buttons button {
+    height: 15px;
+    width: 15px;
+    margin: auto 3px;
+    border-radius: 50%;
+    border-style: none;
+    background-color: var(--equals-toggle);
+    
+
+    transition: all 0.5s ease;
+}
+
+
+
+
+
+.theme-buttons button:nth-child(2),
+.theme-buttons button:nth-child(3) {
+    background-color:transparent;
+}
+
+
+.calc-main {
+    max-width: 545px;
+    width: 100%;
+    height: 630px;
+}
+
+.result-display {
+    height: 125px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: right;
+    padding: 40px 30px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    overflow: hidden;
+
+    background-color: var(--result-display);
+    color: var(--resultdisp-text);
+}
+
+
+.button-grid {
+
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 30px;
+    border-radius: 10px;
+
+
+    background-color: var(--btngrid-toggle);
+
+}
+
+
+.delete{
+    color: var(--resetDlt-text);
+}
+
+.buttons {
+    padding: 10px 0;
+    font-size: 2rem;
+    border-radius: 10px;
+    font-weight: bold;
+    border-style: none;
+    background-color: var(--opbtn-background);
+
+    -webkit-box-shadow: 0px 3px 1px 0px var(--opbtn-background);
+    -moz-box-shadow: 0px 3px 1px 0px var(--opbtn-shadow);
+    box-shadow: 0px 3px 1px 0px var(--opbtn-shadow);
+}
+
+.op-btn{
+    color:var(--opbtn-text);
+}
+
+.op-btn:hover{
+    background-color: var(--opbtn-hover);
+}
+
+.delete,.reset {
+    
+    background-color: var(--resetdlt-background);
+    color:var(--resetDlt-text);
+
+
+    -webkit-box-shadow: 0px 3px 1px 0px var(--resetdlt-background);
+    -moz-box-shadow: 0px 3px 1px 0px var(--resetdlt-shadow);
+    box-shadow: 0px 3px 1px 0px var(--resetdlt-shadow);
+
+}
+
+
+
+
+
+.reset {
+    grid-column: 1/3;
+}
+
+.reset:hover,
+.delete:hover {
+    background-color: var(--delReset-hover);
+}
+
+.equals {
+    grid-column: 3/5;
+    color: var(--equals-text);
+    background-color: var(--equals-toggle);
+
+    -webkit-box-shadow: 0px 3px 1px 0px var(--equals-toggle);;
+    -moz-box-shadow: 0px 3px 1px 0px var(--equalstoggle-shadow);
+    box-shadow: 0px 3px 1px 0px var(--equalstoggle-shadow);
+}
+
+
+.equals:hover {
+    background-color: var(--equals-hover);
+
+}
+
+
+
+
+
+
+
+
+
+.attribution {
+    color: var(--attribution-one);
+    margin: 30px auto;
+    font-size: 0.9rem;
+}
+
+.attribution a {
+    color: var(--attribution-two);
+    text-decoration: none;
+}
